@@ -20,6 +20,7 @@
 import cockpit from 'cockpit';
 import React from 'react';
 import { Alert, Card, CardTitle, CardBody } from '@patternfly/react-core';
+import { ClusterIcon } from '@patternfly/react-icons';
 
 const _ = cockpit.gettext;
 
@@ -35,15 +36,21 @@ export class Application extends React.Component {
 
     render() {
         return (
-            <Card>
-                <CardTitle>Starter Kit</CardTitle>
-                <CardBody>
-                    <Alert
-                        variant="info"
-                        title={ cockpit.format(_("Running on $0"), this.state.hostname) }
-                    />
-                </CardBody>
-            </Card>
+            <div>
+                <Card>
+                    <CardTitle>Test</CardTitle>
+                    <CardBody>
+                        <Alert
+                            variant="info"
+                            title="This is a Test"
+                        />
+                    </CardBody>
+                </Card>
+                <div>
+                    <h1>Haha Hoho</h1>
+                    <ClusterIcon />
+                </div>
+            </div>
         );
     }
 }
