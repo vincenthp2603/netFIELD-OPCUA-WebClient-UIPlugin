@@ -17,40 +17,24 @@
  * along with Cockpit; If not, see <http://www.gnu.org/licenses/>.
  */
 
-import cockpit from 'cockpit';
 import React from 'react';
-import { Alert, Card, CardTitle, CardBody } from '@patternfly/react-core';
-import { ClusterIcon } from '@patternfly/react-icons';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-const _ = cockpit.gettext;
+import Header from './components/Header/header';
+import SearchInputBlock from './components/SearchInputBlock/searchinputblock';
+import MainApp from './components/MainApp/mainapp';
 
 export class Application extends React.Component {
-    constructor() {
-        super();
-        this.state = { hostname: _("Unknown") };
-
-        cockpit.file('/etc/hostname').watch(content => {
-            this.setState({ hostname: content.trim() });
-        });
-    }
-
     render() {
         return (
-            <div>
-                <Card>
-                    <CardTitle>Test</CardTitle>
-                    <CardBody>
-                        <Alert
-                            variant="info"
-                            title="This is a Test"
-                        />
-                    </CardBody>
-                </Card>
+            <Provider store={store}>
                 <div>
-                    <h1>Haha Hoho</h1>
-                    <ClusterIcon />
+                    <Header />
+                    <SearchInputBlock />
+                    <MainApp />
                 </div>
-            </div>
+            </Provider>
         );
     }
 }

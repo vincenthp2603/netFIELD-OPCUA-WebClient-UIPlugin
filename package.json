@@ -28,6 +28,7 @@
     "eslint-config-standard-jsx": "^11.0.0-1",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.29.4",
@@ -53,7 +54,10 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@patternfly/patternfly": "4.194.4",
     "@patternfly/react-core": "4.214.2",
+    "@reduxjs/toolkit": "^1.8.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0"
   }
 }
